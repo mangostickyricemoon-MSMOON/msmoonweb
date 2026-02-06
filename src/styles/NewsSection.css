@@ -1,0 +1,187 @@
+.newssection {
+  font-family: "Berlin Sans FB", Arial, sans-serif;
+  text-align: center;
+  color: white;
+  padding: 0px 20px;
+}
+
+/* ✅ Title */
+.newssection h2 {
+  font-size: 4rem;
+  color: #ffd700; /* สีเหลือง */
+  margin-bottom: 10px;
+}
+
+.newssection p {
+  font-size: 2rem;
+  color: #f0f0f0;
+  margin: 6px 0;
+}
+
+/* ✅ Item ครอบด้วย background สีขาว */
+.news-item.white-bg {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 700px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  box-shadow: 0 0 12px rgba(255, 215, 0, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.news-item.white-bg:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.7);
+}
+
+/* ✅ รูป NFT */
+.news-image-left {
+  width: 200px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(255, 215, 0, 0.3);
+}
+
+/* ✅ Content ด้านขวา */
+.news-content {
+  flex: 1;
+  text-align: left;
+}
+
+/* ✅ หัวข้อภายในมีพื้นหลังขาว */
+.news-content h3 {
+  font-size: 1.6rem;
+  color: #0f1932;
+  margin: 0 auto 8px auto;
+  background: #ffffff;
+  padding: 8px 12px;
+  border-radius: 6px;
+  display: block;
+  text-align: center;
+}
+
+/* ✅ ปุ่ม */
+.news-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 12px;
+  background: #ffffff;
+  padding: 10px;
+  border-radius: 8px;
+  margin-top: 0;
+}
+
+.news-btn {
+  display: inline-block;
+  background: #ffd700;
+  color: #0f1932;
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 10px 18px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.news-btn:hover {
+  background: #ffea4d;
+  transform: scale(1.05);
+}
+
+/* ✅ Responsive */
+
+/* มือถือแนวตั้ง */
+@media (max-width: 480px) {
+  .news-item.white-bg {
+    flex-direction: row;
+    text-align: center;
+    width: 80%;
+  }
+
+  .news-image-left {
+    width: 50%;
+    max-width: 240px;
+    margin-bottom: 0px;
+  }
+
+  .news-content {
+    text-align: center;
+  }
+
+  .news-content h3 {
+    font-size: 1.4rem;
+  }
+
+  .news-btn {
+    font-size: 1rem;
+    padding: 8px 14px;
+  }
+}
+
+/* มือถือแนวนอน */
+@media (min-width: 481px) and (max-width: 767px) {
+  .news-item.white-bg {
+    flex-direction: row;
+    text-align: center;
+    width: 80%;
+  }
+
+  .news-image-left {
+    width: 40%;
+    max-width: 260px;
+    margin-bottom: 12px;
+  }
+
+  .news-content {
+    text-align: center;
+  }
+
+  .news-btn {
+    font-size: 1.2rem;
+    padding: 9px 16px;
+  }
+}
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .news-item.white-bg {
+    max-width: 600px;
+  }
+
+  .news-image-left {
+    width: 180px;
+  }
+
+  .news-content h3 {
+    font-size: 1.5rem;
+  }
+
+  .news-btn {
+    font-size: 1.4rem;
+    padding: 10px 18px;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .news-item.white-bg {
+    max-width: 1000px;
+  }
+
+  .news-image-left {
+    width: 500px;
+  }
+
+  .news-content h3 {
+    font-size: 3rem;
+  }
+
+  .news-btn {
+    font-size: 2rem;
+    padding: 12px 20px;
+  }
+}

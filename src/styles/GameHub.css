@@ -1,0 +1,161 @@
+/* ✅ Section GameHub */
+.gamehub {
+  text-align: center;
+  padding: 0px 20px;
+  font-family: "Berlin Sans FB", Arial, sans-serif;
+  color: white;
+}
+
+/* ✅ Title สีแยก */
+.gamehub-title-yellow {
+  color: #ffd700; /* สีทอง/เหลือง */
+  text-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+}
+
+.gamehub-title-white {
+  color: #ffffff; /* สีขาว */
+  text-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+}
+
+.gamehub h2 {
+  font-size: 5rem;
+  margin-bottom: 20px;
+}
+
+/* ✅ กล่องสีขาวครอบทั้งหมด */
+.gamehub-card {
+  background: #ffffff;          /* พื้นหลังสีขาว */
+  
+  border-radius: 12px;          /* มุมโค้ง */
+  padding: 20px;
+  padding-top: 3px;                /* ระยะห่างด้านใน */
+  max-width: 800px;             /* จำกัดความกว้าง */
+  margin: 0 auto;               /* จัดกลาง */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2); /* เงา */
+  text-align: center;           /* จัดข้อความกลาง */
+}
+
+/* ✅ รูป */
+.gamehub-image {
+  width: 240px;
+  height: auto;
+  margin: 20px auto;
+  display: block;
+  border-radius: 12px;
+  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.6));
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.gamehub-image:hover {
+  transform: scale(1.05);
+  filter: drop-shadow(0 0 14px rgba(0, 0, 0, 0.8));
+}
+
+/* ✅ Description */
+.gamehub p {
+  max-width: 1000px;
+  margin: 20px auto;
+  font-size: 1.1rem;
+  line-height: 1.4;
+  color: #333; /* เปลี่ยนเป็นสีเข้มให้อ่านง่ายบนพื้นขาว */
+}
+
+/* ✅ Container ปุ่ม */
+.gamehub-buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+/* ✅ ปุ่ม */
+.gamehub-btn {
+  display: inline-block;
+  min-width: 200px;
+  padding: 12px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  text-align: center;
+  color: rgba(24,47,78, 1);
+  background: linear-gradient(135deg, #ffd700, #ff8c00);
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.gamehub-btn:hover {
+  transform: scale(1.05);
+  background: linear-gradient(135deg, #ffea00, #ffa500);
+}
+
+/* ✅ Responsive */
+
+/* มือถือเล็ก (<480px) */
+@media (max-width: 480px) {
+  .gamehub h2 {
+    font-size: 3rem;
+  }
+  .gamehub-card {
+    max-width: 90%;
+    padding: 16px;
+    padding-top: 5px;
+  }
+  .gamehub-image {
+    width: 100%;
+    max-width: 350px;
+  }
+  .gamehub p {
+    font-size: 1.2rem;
+    color: #333;
+  }
+  .gamehub-btn {
+    min-width: 160px;
+    font-size: 1.2rem;
+    padding: 10px 16px;
+  }
+}
+
+/* Tablet (768px–1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .gamehub h2 {
+    font-size: 4rem;
+  }
+  .gamehub-card {
+    max-width: 80%;
+    padding: 40px;
+    padding-top: 5px;
+  }
+  .gamehub-image {
+    width: 100%;
+    max-width: 600px;
+  }
+  .gamehub p {
+    font-size: 1.5rem;
+    color: #333;
+  }
+  .gamehub-btn {
+    min-width: 180px;
+    font-size: 2rem;
+  }
+}
+
+/* Desktop (>=1024px) */
+@media (min-width: 1024px) {
+  .gamehub h2 {
+    font-size: 5rem;
+  }
+  .gamehub-card {
+    max-width: 1000px;
+  }
+  .gamehub-image {
+    width: 100%;
+    max-width: 1024px;
+  }
+  .gamehub p {
+    font-size: 2rem;
+    color: #333;
+  }
+  .gamehub-btn {
+    min-width: 220px;
+    font-size: 1.8rem;
+  }
+}

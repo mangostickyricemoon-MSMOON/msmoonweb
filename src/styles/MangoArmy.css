@@ -1,0 +1,126 @@
+.mangoarmy {
+  text-align: center;
+  padding: 0px 20px;
+}
+
+/* ✅ Title สีแยก */
+.mangoarmy-title-yellow {
+  color: #ffd700; /* สีทอง/เหลือง */
+  text-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+}
+
+.mangoarmy-title-white {
+  color: #ffffff; /* สีขาว */
+  text-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+}
+
+.mangoarmy h2 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* ✅ Desktop: ตัวใหญ่ขึ้น */
+@media (min-width: 1024px) {
+  .mangoarmy h2 {
+    font-size: 4.3rem;
+    text-align: center;
+  }
+}
+
+/* ✅ รูปหลัก */
+.mangoarmy-image {
+  width: 300px;
+  margin: 20px auto;
+  display: block;
+  border-radius: 16px; 
+  border: 4px solid #ffffff; /* ✅ ขอบสีขาวรอบรูป */
+  filter: drop-shadow(0 0 12px rgba(0, 0, 0, 0.5));
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.mangoarmy-image:hover {
+  transform: scale(1.05);
+  filter: drop-shadow(0 0 16px rgba(0, 0, 0, 0.7));
+}
+
+/* ✅ Social Links */
+.social-links {
+  margin-top: 60px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.social-links img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%; 
+  border: 2px solid #ffffff; /* ✅ ขอบขาวรอบ icon */
+  transition: transform 0.3s ease, filter 0.3s ease;
+  cursor: pointer;
+  filter: drop-shadow(0 0 6px rgba(0, 0, 0, 0.4));
+}
+
+.social-links img:hover {
+  transform: scale(1.2);
+  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.6));
+}
+
+/* ✅ Responsive */
+
+/* มือถือเล็ก (<480px) */
+@media (max-width: 480px) {
+  .mangoarmy h2 {
+    font-size: 3rem;
+  }
+  .mangoarmy-image {
+    width: 400px;
+  }
+  .social-links img {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+/* มือถือแนวนอน (481px–767px) */
+@media (min-width: 481px) and (max-width: 767px) {
+  .mangoarmy h2 {
+    font-size: 2rem;
+  }
+  .mangoarmy-image {
+    width: 400px;
+  }
+  .social-links img {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+/* Tablet (768px–1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .mangoarmy h2 {
+    font-size: 3rem;
+  }
+  .mangoarmy-image {
+    width: 600px;
+  }
+  .social-links img {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+/* Desktop (>=1024px) */
+@media (min-width: 1024px) {
+  .mangoarmy h2 {
+    font-size: 5rem;
+  }
+  .mangoarmy-image {
+    width: 1000px;
+  }
+  .social-links img {
+    width: 100px;
+    height: 100px;
+  }
+}

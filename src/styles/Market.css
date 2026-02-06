@@ -1,0 +1,175 @@
+/* ✅ Section Market */
+.section market {
+  text-align: center;
+  padding: 20px;
+  font-family: "Berlin Sans FB", Arial, sans-serif;
+  color: white;
+  margin-top: 0; /* เอาช่องว่างด้านบนออก */
+}
+
+/* ✅ Title */
+.market-title-yellow {
+  color: #ffd700; /* สีทอง/เหลือง */
+  text-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+}
+
+.market-title-white {
+  color: #ffffff; /* สีขาว */
+  text-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+}
+
+.market h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+
+/* ✅ Container หลัก */
+.market-grid {
+  display: flex;
+  flex-direction: column; /* แบ่งเป็นแถวบน-ล่าง */
+  gap: 20px;              /* ระยะห่างระหว่างแถว */
+  align-items: center;
+}
+
+/* ✅ แต่ละแถว */
+.market-row {
+  display: flex;
+  justify-content: center;
+  gap: 20px;              /* ระยะห่างระหว่าง item */
+}
+
+/* ✅ Item (รูป + ปุ่ม) */
+.market-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* ✅ รูป */
+.market-img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  filter: drop-shadow(0 0 8px rgba(0, 0, 0, 0.6));
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.market-img:hover {
+  transform: scale(1.05);
+  filter: drop-shadow(0 0 12px rgba(0, 0, 0, 0.8));
+}
+
+/* ✅ ปุ่ม */
+.market-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 140px;
+  min-height: 40px;
+  padding: 8px 0;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  color: rgba(24,47,78, 1);
+  background: #ffd700;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.market-btn:hover {
+  transform: scale(1.05);
+  background: #ffea00;
+}
+
+/* ✅ ปุ่มเฉพาะ */
+.buy-btn {
+  background: linear-gradient(135deg, #ffea00, #ffb700);
+}
+
+.chart-btn {
+  background: linear-gradient(135deg, #ffea00, #ffb700);
+}
+
+.stake-btn-main {
+  background: linear-gradient(135deg, #ffea00, #ffb700);
+  color: #171e30;
+}
+
+.explorer-btn {
+  background: linear-gradient(135deg, #ffea00, #ffb700);
+  color: #171e30;
+}
+
+/* ✅ Responsive */
+
+/* มือถือเล็ก (<480px) */
+@media (max-width: 480px) {
+  .market h2 {
+    font-size: 3rem;
+  }
+  .market-img {
+    width: 180px;
+    height: 180px;
+  }
+  .market-btn {
+    width: 180px;
+    min-height: 30px;
+    font-size: 1.2rem;
+    padding: 6px 0;
+  }
+}
+
+/* มือถือแนวนอน (481px–767px) */
+@media (min-width: 481px) and (max-width: 767px) {
+  .market h2 {
+    font-size: 3rem;
+  }
+  .market-img {
+    width: 200px;
+    height: 200px;
+  }
+  .market-btn {
+    width: 200px;
+    min-height: 36px;
+    font-size: 1.4rem;
+    padding: 8px 0;
+  }
+}
+
+/* Tablet (768px–1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .market h2 {
+    font-size: 2.6rem;
+  }
+  .market-img {
+    width: 320px;
+    height: 320px;
+  }
+  .market-btn {
+    width: 320px;
+    min-height: 40px;
+    font-size: 1.8rem;
+    padding: 10px 0;
+  }
+}
+
+/* Desktop (>=1024px) */
+@media (min-width: 1024px) {
+  .market h2 {
+    font-size: 4rem;
+  }
+  .market-img {
+    width: 500px;
+    height: 500px;
+  }
+  .market-btn {
+    width: 500px;
+    min-height: 48px;
+    font-size: 2.5rem;
+    padding: 12px 0;
+  }
+}

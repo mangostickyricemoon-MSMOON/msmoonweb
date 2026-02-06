@@ -1,0 +1,165 @@
+/* ✅ Section */
+.msmoon-section {
+  font-family: "Berlin Sans FB", Arial, sans-serif;
+  text-align: center;
+  color: white;
+  padding: 20px;
+}
+
+/* ✅ Logo */
+.msmoon-logo {
+  width: clamp(200px, 50vw, 800px); /* responsive */
+  margin: 20px auto;
+  display: block;
+  filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.4));
+}
+
+/* ✅ Title */
+.msmoon-title {
+  color: #ffd700;            
+  font-size: 8rem;           
+  line-height: 1.2;
+  max-width: 1200px;
+  margin: 10px auto;
+  padding: 0 10px;
+  text-align: center;
+}
+
+.msmoon-subtitle {
+  color: #ffd700;            
+  font-size: 2.4rem;         
+  line-height: 1.2;
+  max-width: 1200px;
+  margin: 10px auto;
+  padding: 0 10px;
+  text-align: center;
+}
+
+/* ✅ Description */
+.msmoon-description {
+  color: #ffffff;            
+  font-size: 2rem;
+  line-height: 1.4;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 16px;
+  text-align: center;
+}
+
+/* ✅ Contract Section */
+.contract-wrapper {
+  margin-top: 30px;
+}
+
+.contract-label {
+  color: #ffd700;            
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+/* ✅ กล่อง contract address + icon */
+.contract-box {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px 20px;
+  border: 2px solid #ffd700; 
+  border-radius: 8px;
+  background: rgba(15, 25, 50, 0.8); 
+}
+
+.contract-value {
+  color: #ffffff;            
+  font-size: 2rem;
+  white-space: nowrap;
+}
+
+.contract-copy-icon {
+  width: clamp(18px, 2vw, 28px); /* responsive */
+  height: clamp(18px, 2vw, 28px);
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.contract-copy-icon:hover {
+  transform: scale(1.2);     
+}
+
+/* ✅ Responsive */
+
+/* มือถือแนวตั้ง (จอเล็ก < 480px) */
+@media (max-width: 480px) {
+  .msmoon-title {
+    font-size: 3rem !important;
+  }
+  .msmoon-subtitle {
+    font-size: 1.4rem !important;
+  }
+  .msmoon-description {
+    font-size: 1.1rem !important;
+  }
+  .contract-label {
+    font-size: 1.2rem !important;
+  }
+  .contract-value {
+    font-size: 0.7rem !important;
+  }
+}
+
+/* มือถือแนวนอน (481px–767px) */
+@media (min-width: 481px) and (max-width: 767px) {
+  .msmoon-title {
+    font-size: 4rem !important;
+  }
+  .msmoon-subtitle {
+    font-size: 1.8rem !important;
+  }
+  .msmoon-description {
+    font-size: 1.2rem !important;
+  }
+  .contract-label {
+    font-size: 1.4rem !important;
+  }
+  .contract-value {
+    font-size: 1.2rem !important;
+  }
+}
+
+/* Tablet (768px–1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .msmoon-title {
+    font-size: 6rem !important;
+  }
+  .msmoon-subtitle {
+    font-size: 2rem !important;
+  }
+  .msmoon-description {
+    font-size: 1.4rem !important;
+  }
+  .contract-label {
+    font-size: 1.6rem !important;
+  }
+  .contract-value {
+    font-size: 1.4rem !important;
+  }
+}
+
+/* Desktop (>=1024px) */
+@media (min-width: 1024px) {
+  .msmoon-title {
+    font-size: 8rem !important;
+  }
+  .msmoon-subtitle {
+    font-size: 2.4rem !important;
+  }
+  .msmoon-description {
+    font-size: 2rem !important;
+  }
+  .contract-label {
+    font-size: 2rem !important;
+  }
+  .contract-value {
+    font-size: 2rem !important;
+  }
+}

@@ -1,0 +1,101 @@
+/* ชั้นฟ้า */
+.sky {
+  position: fixed;       /* ✅ ตรึงเต็มหน้าจอ */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;  /* ✅ ไม่บังการคลิก */
+  z-index: 0;            /* ✅ อยู่ชั้นล่างสุด */
+}
+
+/* ดาวเล็ก */
+.star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: white;
+  border-radius: 50%;
+  animation: twinkle 2s infinite ease-in-out;
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.2; }
+  50% { opacity: 1; }
+}
+
+/* ดาวใหญ่ */
+.big-star {
+  position: absolute;
+  background: white;
+  border-radius: 50%;
+  box-shadow: 0 0 20px 8px rgba(73, 120, 248, 0.3);
+  animation: twinkleBig 3s infinite ease-in-out;
+}
+
+@keyframes twinkleBig {
+  0%, 100% { opacity: 0.3; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.5); }
+}
+
+/* เมฆ */
+.cloud {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 50%;
+  filter: blur(40px);
+  animation: floatCloud 100s linear infinite;
+}
+
+.big-cloud {
+  width: 320px;
+  height: 160px;
+}
+
+@keyframes floatCloud {
+  0% { transform: translateX(-400px); }
+  100% { transform: translateX(110vw); }
+}
+
+/* เนื้อหา */
+.section,
+.msmoon,
+.token-section,
+.army-section,
+.gamehub-section,
+.news-section {
+  position: relative;
+  z-index: 1;   /* ✅ เนื้อหาอยู่ชั้นบน */
+}
+
+.spaceship {
+  position: absolute;
+  bottom: -150px;   /* เริ่มนอกจอด้านล่าง */
+  left: -150px;     /* เริ่มนอกจอด้านซ้าย */
+  width: 240px;
+  height: auto;
+  animation: fly-curve 12s linear infinite;
+}
+
+/* ✅ เคลื่อนที่เฉียงขึ้น แล้วโค้งลงขวา */
+@keyframes fly-curve {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  30% {
+    transform: translate(40vw, -40vh) rotate(-10deg); /* บินเฉียงขึ้น */
+    opacity: 1;
+  }
+  60% {
+    transform: translate(80vw, -70vh) rotate(10deg);  /* ขึ้นสูงสุด */
+    opacity: 1;
+  }
+  100% {
+    transform: translate(120vw, -90vh) rotate(10deg); /* โค้งขึ้นขวา */
+    opacity: 0;
+  }
+}
